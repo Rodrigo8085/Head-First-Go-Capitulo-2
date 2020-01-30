@@ -23,7 +23,7 @@ func main() {
 	//instancia de lectura de datos en el terminal
 	lector := bufio.NewReader(os.Stdin)
 	//configurando para imprimir de forma predetrminada el mesaje de error
-	terminado := false
+	terminado := false // ***************************** ":=" se declara variable y se asigna el valor. "llamado Short variable declaration"
 	//For solo puede ejecutarce solo 10 veces
 	for intentos := 0; intentos < 10; intentos++ {
 		fmt.Println("Tienes: ", 10-intentos, " veces aún.")
@@ -36,7 +36,7 @@ func main() {
 			log.Fatal(err)
 		}
 		// remueve la linea que se agrego cuando se dio el enter
-		input = strings.TrimSpace(input) // *************** investigar cual es la diferencia el igual y el igual :=
+		input = strings.TrimSpace(input) // *********************** "=" se le asigna valor
 		//convertir el string de ingreso a un interger
 		intento, err := strconv.Atoi(input)
 		if err != nil {
